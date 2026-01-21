@@ -43,18 +43,22 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
 /* ===== Map ===== */
 .map {
   margin-top: 3em;
+  background: #fff;          /* 페이지 배경과 동일 */
+  padding: 0;
 }
 
 .map img {
   width: 100%;
   max-width: 360px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  display: block;
+  margin: 0 auto;
+  border-radius: 0;          /* 이미지 느낌 제거 */
+  box-shadow: none;          /* 그림자 제거 */
 }
 
 .transport {
   max-width: 360px;
-  margin: 1.5em auto 0;
+  margin: 1em auto 0;
   text-align: left;
   font-size: .95em;
   line-height: 1.7;
