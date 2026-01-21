@@ -24,7 +24,7 @@ body {
 }
 
 header { padding: 24px 12px; }
-h1 { font-size: 1.9em; }
+h1 { font-size: 1.5em; }
 .date { margin: .4em 0; }
 .location { color: #666; }
 
@@ -110,6 +110,31 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
   font-size: .8em;
   color: #888;
   margin-top: .8em;
+}
+
+.account-item {
+  padding: 1.1em 0;
+  border-bottom: 1px solid #eee;
+}
+
+.account-item:last-child {
+  border-bottom: none;
+}
+
+.account-title {
+  font-size: .95em;
+  color: #555;
+}
+
+.account-number {
+  margin-top: .25em;
+  font-size: 1.05em;
+  color: #222;
+  letter-spacing: .03em;
+}
+
+.account-item:active {
+  background: #f9f9f9;
 }
 
 /* ===== Lightbox ===== */
@@ -205,7 +230,7 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
 <div class="names">👰 한아영 ❤️ 🤵 김성국</div>
 
 <section class="map">
-  <img src="map.png" alt="더채플앳논현 약도">
+  <img src="map_r.png" alt="더채플앳논현 약도">
 
   <div class="transport">
     <h3>버스</h3>
@@ -215,8 +240,8 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
     차병원(역삼방면) 하차 후 역삼역 방면 도보 50m
 
     <h3>지하철</h3>
-    <b>언주역(9호선)</b> 7번 출구 → 정면 방향 도보 150m<br>
-    <b>역삼역(2호선)</b> 6번 출구 → 좌측 방향 도보 450m
+    언주역(9호선)</b> 7번 출구 → 정면 방향 도보 150m<br>
+    역삼역(2호선)</b> 6번 출구 → 좌측 방향 도보 450m
 
   </div>
 </section>
@@ -237,15 +262,22 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
 </section>
 
 <section class="account">
-  <div class="copy" data-text="우리은행 14508273044">
-    신부 아버지 | 한원용 우리은행 14508273044
+  <div class="account-heading">마음 전하실 곳</div>
+  <div class="account-item copy" data-text="우리은행 14508273044">
+    <div class="account-title">신부 아버지 · 한원용</div>
+    <div class="account-number">우리은행 14508273044</div>
   </div>
-  <div class="copy" data-text="국민은행 224240237566">
-    신부 어머니 | 이미순 국민은행 224240237566
+
+  <div class="account-item copy" data-text="국민은행 224240237566">
+    <div class="account-title">신부 어머니 · 이미순</div>
+    <div class="account-number">국민은행 224240237566</div>
   </div>
-  <div class="copy" data-text="국민은행 69500201177141">
-    신부 | 한아영 국민은행 69500201177141
+
+  <div class="account-item copy" data-text="국민은행 69500201177141">
+    <div class="account-title">신부 · 한아영</div>
+    <div class="account-number">국민은행 69500201177141</div>
   </div>
+
   <div class="copy-hint">※ 계좌번호를 누르면 복사됩니다</div>
 </section>
 
