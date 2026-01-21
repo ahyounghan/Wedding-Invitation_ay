@@ -41,19 +41,13 @@ h1 { font-size: 1.5em; }
 footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
 
 /* ===== Map ===== */
-.map {
-  margin-top: 3em;
-  background: #fff;          /* 페이지 배경과 동일 */
-  padding: 0;
-}
+.map { margin-top: 3em; }
 
 .map img {
   width: 100%;
   max-width: 360px;
   display: block;
   margin: 0 auto;
-  border-radius: 0;          /* 이미지 느낌 제거 */
-  box-shadow: none;          /* 그림자 제거 */
 }
 
 .transport {
@@ -68,10 +62,6 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
 .transport h3 {
   font-size: 1.05em;
   margin: 1.2em 0 .4em;
-}
-
-.transport b {
-  color: #222;
 }
 
 /* ===== Album ===== */
@@ -93,7 +83,7 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
   cursor: pointer;
 }
 
-/* ===== Account (1열, 원래 버전) ===== */
+/* ===== Account ===== */
 .account {
   margin-top: 3em;
   padding: 1.5em 1em;
@@ -101,31 +91,14 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
 }
 
 .account-heading {
-  font-size: 1.15em;        /* 살짝 키움 */
-  color: #222;              /* 본문보다 진하게 */
-  margin-bottom: .9em;     /* 아래 여백 증가 */
+  font-size: 1.15em;
+  color: #222;
+  margin-bottom: .9em;
   letter-spacing: .08em;
-}
-
-.copy {
-  cursor: pointer;
-  line-height: 1.6;
-  padding: .8em 0;
-}
-
-.copy-hint {
-  font-size: .8em;
-  color: #888;
-  margin-top: .8em;
 }
 
 .account-item {
   padding: .7em 0;
-  border-bottom: none;
-}
-
-.account-item:last-child {
-  border-bottom: none;
 }
 
 .account-title {
@@ -135,14 +108,17 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
 }
 
 .account-number {
-  margin-top: 0;
   font-size: 1.05em;
   color: #222;
   letter-spacing: .03em;
 }
 
-.account-item:active {
-  background: #f9f9f9;
+.copy { cursor: pointer; }
+
+.copy-hint {
+  font-size: .8em;
+  color: #888;
+  margin-top: .8em;
 }
 
 /* ===== Lightbox ===== */
@@ -154,6 +130,7 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  touch-action: none;
 }
 
 .slider {
@@ -221,7 +198,7 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
 <body>
 
 <header>
-  <h1>결혼합니다 💍</h1>
+  <h1>초대합니다</h1>
   <div class="date">2026년 5월 23일 (토) 오후 12시 30분</div>
   <div class="location">더채플앳논현 라메르홀 (5F)</div>
 </header>
@@ -231,32 +208,28 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
 <div class="message">
   좋은 인연은 설명이 필요 없고<br>
   좋은 선택은 망설임이 없습니다.<br>
-  우리는 서로에게 그랬습니다.<br><br>
-  우리가 선택한 미래의 첫 장에 초대합니다.
+  저희는 서로에게 그랬습니다.<br><br>
+  저희가 선택한 미래의 첫 장에 초대합니다.
 </div>
 
-<div class="names">👰 한아영 ❤️ 🤵 김성국</div>
+<div class="names">한아영 ❤️ 김성국</div>
 
 <section class="map">
   <img src="map_r_r.png" alt="더채플앳논현 약도">
-
   <div class="transport">
     <h3>버스</h3>
-    간선: 147, 463<br>
-    지선: 4211<br>
-    광역: 3600, 9600<br>
-    차병원(역삼방면) 하차 후 역삼역 방면 도보 50m
+    간선 147, 463 / 지선 4211 / 광역 3600, 9600<br>
+    차병원(역삼방면) 하차 후 도보 50m
 
     <h3>지하철</h3>
-    언주역(9호선)</b> 7번 출구 → 정면 방향 도보 150m<br>
-    역삼역(2호선)</b> 6번 출구 → 좌측 방향 도보 450m
-
+    언주역(9호선) 7번 출구 → 도보 150m<br>
+    역삼역(2호선) 6번 출구 → 도보 450m
   </div>
 </section>
 
 <section class="album">
   <div class="album-grid">
-    <img src="photo_04_r.png">    
+    <img src="photo_04_r.png">
     <img src="photo_09_r.png">
     <img src="photo_05.jpg">
     <img src="photo_10_r.png">
@@ -270,6 +243,7 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
 
 <section class="account">
   <div class="account-heading">마음 전하실 곳</div>
+
   <div class="account-item copy" data-text="우리은행 14508273044">
     <div class="account-title">신부 아버지 · 한원용</div>
     <div class="account-number">우리은행 14508273044</div>
@@ -290,7 +264,6 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
 
 <footer>© 2026 Ahyoung & SungGook Wedding</footer>
 
-<!-- ===== Lightbox ===== -->
 <div id="lightbox">
   <div class="close" id="closeBtn">
     <svg viewBox="0 0 24 24">
@@ -316,19 +289,13 @@ footer { margin: 3em 0 1em; font-size: .9em; color: #aaa; }
 </div>
 
 <script>
-/* 계좌 복사 */
 document.querySelectorAll('.copy').forEach(c=>{
   c.onclick = ()=>{
-    try {
-      navigator.clipboard.writeText(c.dataset.text);
-      alert('계좌번호가 복사되었습니다');
-    } catch(e) {
-      alert('길게 눌러 복사해주세요');
-    }
+    navigator.clipboard.writeText(c.dataset.text);
+    alert('계좌번호가 복사되었습니다');
   };
 });
 
-/* 앨범 라이트박스 */
 const imgs = [...document.querySelectorAll('.album-grid img')];
 const lightbox = document.getElementById('lightbox');
 const slider = document.getElementById('slider');
@@ -343,10 +310,12 @@ imgs.forEach((img,i)=>{
 
 function open(){
   lightbox.style.display='flex';
+  document.body.style.overflow='hidden';
   update();
 }
 function close(){
   lightbox.style.display='none';
+  document.body.style.overflow='';
 }
 function update(){
   slider.style.transform=`translateX(-${idx*100}%)`;
@@ -357,6 +326,17 @@ document.getElementById('closeBtn').onclick = close;
 document.getElementById('prevBtn').onclick = ()=>{ idx=(idx-1+imgs.length)%imgs.length; update(); };
 document.getElementById('nextBtn').onclick = ()=>{ idx=(idx+1)%imgs.length; update(); };
 lightbox.onclick = e=>{ if(e.target===lightbox) close(); };
+
+let startX=0,endX=0;
+slider.addEventListener('touchstart',e=>{startX=e.touches[0].clientX},{passive:true});
+slider.addEventListener('touchmove',e=>{endX=e.touches[0].clientX},{passive:true});
+slider.addEventListener('touchend',()=>{
+  const d=startX-endX;
+  if(Math.abs(d)>50){
+    idx=d>0?(idx+1)%imgs.length:(idx-1+imgs.length)%imgs.length;
+    update();
+  }
+});
 </script>
 
 </body>
